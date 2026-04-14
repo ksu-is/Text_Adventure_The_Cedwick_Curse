@@ -7,7 +7,8 @@ To be determined...
  - [] Initialize lists needed (i.e. inventory, dialouge, choices etc)
  - [] fill in content of story
  - [] create branches with if/elif
+ - [] test 'slow'/timing of text appearance during game
  - [] test and make sure all endings work and are valid
 
  - long shot goal?
- - [] create functions to output a summary of what the player did
+ - [] create functions to output a summary of what the player did on that playthrough
