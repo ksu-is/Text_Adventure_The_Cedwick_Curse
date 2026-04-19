@@ -41,3 +41,7 @@ dialogue_list= []
 # print(textwrap.fill(text,width=80))
 # print()
 
+intro_doc = open("0_intro.txt","r")
+intro_text = intro_doc.read()
+intro_text.close
+print(intro_text)
