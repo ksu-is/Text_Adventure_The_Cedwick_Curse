@@ -2,12 +2,11 @@ To be determined...
  - [x] create repo in KSU-is
  - [x] create readme.md
  - [x] create Projectroadmap.md
- - [] Finish writing story content
- - [] Figure out how to format text content within print()
- - [] Initialize lists needed (i.e. inventory, dialouge, choices etc)
- - [] fill in content of story
+ - [x] Finish writing story content
+ - [x] ~~Figure out how to format text content within print()~~ Make story sections into individual textfiles
+ - [] Initialize lists needed (i.e. inventory, dialouge, choices etc.
  - [] create branches with if/elif
- - [] test 'slow'/timing of text appearance during game
+ - [] ~~test 'slow'/timing of text appearance during game~~ (removing due to constraint of using text files)
  - [] test and make sure all endings work and are valid
 
  - long shot goal?
