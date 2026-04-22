@@ -4,9 +4,10 @@ To be determined...
  - [x] create Projectroadmap.md
  - [x] Finish writing story content
  - [x] ~~Figure out how to format text content within print()~~ Make story sections into individual textfiles
- - [] Initialize lists needed (i.e. inventory, dialouge, choices etc.
+ - [x] Initialize lists needed (i.e. inventory, dialouge, choices etc.
  - [] create branches with if/elif
- - [] ~~test 'slow'/timing of text appearance during game~~ (removing due to constraint of using text files)
+ - [x] test 'slow'/timing of text appearance during game
+ - [x] found a way to clear the screen before displaying the next section
  - [] test and make sure all endings work and are valid
 
  - long shot goal?
