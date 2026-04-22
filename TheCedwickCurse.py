@@ -3,9 +3,8 @@ import sys
 import time     #import time for dialouge speech delay
 import os
 
-a = 2                                           #global variables for time delay
-b = 0.2
-c = 0.08
+a = .4                                           #global variables for time delay
+
 
 inventory = []                                                      #initialize lists
 choices = []
@@ -44,12 +43,11 @@ def intro ():                                                       #define intr
     for p in paragraphs:
         print(textwrap.fill(p, width=90))
         #time.sleep(a)
-        print()                             #blank line between paragraphs
+        print()                                                     #blank line between paragraphs
     
     print("                                       * * *")
     next = input("Press Enter to continue")
     print()
-intro()
 
 def opening():
     clear_screen()
@@ -65,7 +63,6 @@ def opening():
     print("                                       * * *")
     next = input("Press Enter to continue")
     print()
-opening()
 
 def choice_no_2():                                                  #defining choice for no answer in choice_2, leading to end
     clear_screen()
@@ -84,8 +81,8 @@ def choice_no_2():                                                  #defining ch
     summary()
     print()
 
-def self_desc(): 
-    clear_screen()                                                   #import and display 4th txt file: 4_self_desc
+def self_desc():                                                    #import and display 4th txt file: 4_self_desc
+    clear_screen()      
     self_desc_doc = open("4_self_desc.txt","r", encoding="utf-8")
     self_desc_text = self_desc_doc.read()
     paragraphs = self_desc_text.split("\n\n")
@@ -116,21 +113,9 @@ def choice_yes_3():                                                 #defining ch
     print("                                       * * *")
     next = input("Press Enter to continue")
     print()
-    self_desc()
 
-print("Will you help the girl? yes(y) or no(n)")
 
-while True:                                                         #coding for a choice using while true loop
-    choice_1 = input("Enter Y to Help the girl or N to Ignore her: ")
-    print()
-    if choice_1.lower() == "n":
-        choice_no_2()
-        break
-    elif choice_1.lower() == "y":
-        choice_yes_3()
-        break
-    else:
-        invalidoption()
+
 
 
 def help_her():                                                    #import and display 5th txt file: 5_help_her
@@ -147,7 +132,7 @@ def help_her():                                                    #import and d
     print("                                       * * *")
     next = input("Press Enter to continue")
     print()
-help_her()
+
 
 def darkness():                                                     #import and display 6th txt file: 6_darkness_arrives
     clear_screen()
@@ -164,7 +149,7 @@ def darkness():                                                     #import and 
     print("                                       * * *")
     next = input("Press Enter to continue")
     print()
-darkness()
+
 
 def stand_ground():                                                     #import and display 7th txt file: 7_stand_your_ground
     clear_screen()
@@ -199,17 +184,9 @@ def dive():                                                     #import and disp
     print("                                       * * *")
     next = input("Press Enter to continue")
     print()
+    
 
-print("What do you do? (1)Stand your ground or (2)Dive to safety?")     #create choice_2 if/else
 
-choice_2 = input("Enter 1 to Stand your ground or 2 to Dive to safety: ")
-print()
-if choice_2.lower() == "1":
-    stand_ground()
-elif choice_2.lower() == "2":
-    dive()
-else:
-    invalidoption()
 
 def pews():                                                     #import and display 9th txt file: 9_pews
     clear_screen()
@@ -228,7 +205,6 @@ def pews():                                                     #import and disp
     next = input("Press Enter to continue")
     print()
 
-    altar()                                                        #continue to altar() after pews()
 
 def altar():                                                     #import and display 10th txt file: 10_altar
     clear_screen()
@@ -241,18 +217,225 @@ def altar():                                                     #import and dis
         #time.sleep(a)
         print()  # blank line between paragraphs
 
-    choices.append("You investiaged the altar.")
+    choices.append("You investigated the altar.")
 
     print("                                       * * *")
     next = input("Press Enter to continue")
     print()
+    print()
 
-print("What do you want to do? (1)search the pews or (2)investigate the altar?")     #create choice_2 if/else
+def book_in_bag():                                                     #import and display 11th txt file: 11_book_in_bag
+    clear_screen()
+    book_bag_doc = open("11_book_in_bag.txt","r", encoding="utf-8")
+    book_bag_text = book_bag_doc.read()
+    paragraphs = book_bag_text.split("\n\n")
 
-choice_3 = input("Enter 1 to search the pews or 2 to investigate the altar: ")
-if choice_3 == "1":
-    pews()
-elif choice_3 == "2":
-    altar()
+    for p in paragraphs:
+        print(textwrap.fill(p, width=90))
+        #time.sleep(a)
+        print()  # blank line between paragraphs
+
+    choices.append("You tried to put the book in your bag, instead got trapped inside.")
+
+    print("                                       * * *")
+    next = input("Press Enter to continue")
+    print()
+    print()
+
+def open_tome():                                                     #import and display 12th txt file: 12_open_tome
+    clear_screen()
+    open_tome_doc = open("12_open_tome.txt","r", encoding="utf-8")
+    open_tome_text = open_tome_doc.read()
+    paragraphs = open_tome_text.split("\n\n")
+
+    for p in paragraphs:
+        print(textwrap.fill(p, width=90))
+        #time.sleep(a)
+        print()  # blank line between paragraphs
+
+    choices.append("You opened the book.")
+
+    print("                                       * * *")
+    next = input("Press Enter to continue")
+    print()
+    print()
+
+
+def on_table():                                                     #import and display 13th txt file: 13_on_table
+    clear_screen()
+    on_table_doc = open("13_on_table.txt","r", encoding="utf-8")
+    on_table_text = on_table_doc.read()
+    paragraphs = on_table_text.split("\n\n")
+
+    for p in paragraphs:
+        print(textwrap.fill(p, width=90))
+        #time.sleep(a)
+        print()  # blank line between paragraphs
+
+    print("                                       * * *")
+    next = input("Press Enter to continue")
+    print()
+    print()
+
+def in_the_bag():                                                     #import and display 14th txt file: 14_in_the_bag
+    clear_screen()
+    in_the_bag_doc = open("14_in_the_bag.txt","r", encoding="utf-8")
+    in_the_bag_text = in_the_bag_doc.read()
+    paragraphs = in_the_bag_text.split("\n\n")
+
+    for p in paragraphs:
+        print(textwrap.fill(p, width=90))
+        #time.sleep(a)
+        print()  # blank line between paragraphs
+
+    print("                                       * * *")
+    next = input("Press Enter to continue")
+    print()
+    print()
+
+def what_book():                                                     #import and display 15th txt file: 15_what_book
+    clear_screen()
+    what_book_doc = open("15_what_book.txt","r", encoding="utf-8")
+    what_book_text = what_book_doc.read()
+    paragraphs = what_book_text.split("\n\n")
+
+    for p in paragraphs:
+        print(textwrap.fill(p, width=90))
+        #time.sleep(a)
+        print()  # blank line between paragraphs
+
+    print("                                       * * *")
+    next = input("Press Enter to continue")
+    print()
+    print()
+
+def Aelita_Cedwick():                                                     #import and display 13th txt file: 16_Aelita_Cedwick
+    clear_screen()
+    Aelita_Cedwick_doc = open("16_Aelita_Cedwick.txt","r", encoding="utf-8")
+    Aelita_Cedwick_text = Aelita_Cedwick_doc.read()
+    paragraphs = Aelita_Cedwick_text.split("\n\n")
+
+    for p in paragraphs:
+        print(textwrap.fill(p, width=90))
+        #time.sleep(a)
+        print()  # blank line between paragraphs
+
+    print("                                       * * *")
+    next = input("Press Enter to continue")
+    print()
+    print()
+
+def dark_returns():                                                     #import and display 13th txt file: 17_dark_returns
+    clear_screen()
+    dark_returns_doc = open("17_dark_returns.txt","r", encoding="utf-8")
+    dark_returns_text = dark_returns_doc.read()
+    paragraphs = dark_returns_text.split("\n\n")
+
+    for p in paragraphs:
+        print(textwrap.fill(p, width=90))
+        #time.sleep(a)
+        print()  # blank line between paragraphs
+
+    print("                                       * * *")
+    next = input("Press Enter to continue")
+    print()
+    print()
+
+
+
+
+
+intro()
+opening()
+
+print("Will you help the girl? yes(y) or no(n)")
+
+while True:                                                         #coding for a choice using while true loop
+    choice_1 = input("Enter Y to Help the girl or N to Ignore her: ")
+    print()
+    if choice_1.lower() == "n":
+        choice_no_2()
+        break
+    elif choice_1.lower() == "y":
+        choice_yes_3()
+        break
+    else:
+        invalidoption()
+
+self_desc()    #4
+
+help_her()      #5
+
+darkness()      #6
+
+print("What do you do? (1)Stand your ground or (2)Dive to safety?")     #create choice_2 if/else  7 or 8
+
+choice_2 = input("Enter 1 to Stand your ground or 2 to Dive to safety: ")
+print()
+if choice_2.lower() == "1":
+    stand_ground()
+elif choice_2.lower() == "2":
+    dive()
 else:
     invalidoption()
+
+print("What do you want to do? (1)search the pews or (2)investigate the altar?")     #create choice_3 if/else 9 or 10
+print()
+
+while True:
+    choice_3 = input("Enter 1 to search the pews or 2 to investigate the altar: ")
+    if choice_3 == "1":
+        pews()
+        break
+    elif choice_3 == "2":
+        altar()
+        break
+    else:
+        invalidoption()
+
+
+print("What do you want to do? (1)Hide the tome or (2) Open the tome")              #create choice_4 11 or 12
+print()
+while True:
+    choice_4 = input("Enter 1 to Hide the book or 2 to Open the book: ")
+    if choice_4 == "1":
+        book_in_bag()
+        break
+    elif choice_4 =="2":
+        open_tome()
+        break
+    else:
+        invalidoption()
+
+on_table()
+
+print("What is your answer? (1)Tome is in the bag or (2)What book?")              #create choice_5 14 or 15
+print()
+while True:
+    choice_5 = input("Enter 1 to say book is in the bag or 2 to say What book?: ")
+    if choice_5 == "1":
+        book_in_bag()
+        break
+    elif choice_5 =="2":
+        open_tome()
+        break
+    else:
+        invalidoption()
+
+Aelita_Cedwick()                                #16
+
+dark_returns()                                  #17
+
+print("What is your answer? (1)Save yourself! or (2)Save her!")              #create choice_6 18/19 or 20
+print()
+while True:
+    choice_6 = input("Enter 1 to save yourself or 2 to save her: ")
+    if choice_6 == "1":
+        book_in_bag()
+        consequences()
+        break
+    elif choice_6 =="2":
+        open_tome()
+        break
+    else:
+        invalidoption()
