@@ -15,7 +15,7 @@ def summary():                                                      #creating su
     print("You have made these choices:", choices)
     
     while True:
-        choice = input("Unsatisfied with your choices. Would you like to play again? (Y/N): ").lower()
+        choice = input("Unsatisfied with your choices? Would you like to play again? (Y/N): ").lower()
 
         if choice == "y":                                       #gives player option to restart the game and clears previously made choices and inventory
             inventory.clear()
@@ -238,8 +238,7 @@ def book_in_bag():                                                     #import a
     choices.append("You tried to put the book in your bag, instead got trapped inside.")
 
     print("                                       * * *")
-    next = input("Press Enter to continue")
-    print()
+    summary()
     print()
 
 def open_tome():                                                     #import and display 12th txt file: 12_open_tome
@@ -288,6 +287,8 @@ def in_the_bag():                                                     #import an
         #time.sleep(a)
         print()  # blank line between paragraphs
 
+    choices.append("You said the tome was in the bag. Bright light saved you, you continued.")
+
     print("                                       * * *")
     next = input("Press Enter to continue")
     print()
@@ -304,12 +305,13 @@ def what_book():                                                     #import and
         #time.sleep(a)
         print()  # blank line between paragraphs
 
+    choices.append("Lied and played dumb about the tome. The shade did not like that, you were gutted.")
+
     print("                                       * * *")
-    next = input("Press Enter to continue")
-    print()
+    summary()
     print()
 
-def Aelita_Cedwick():                                                     #import and display 13th txt file: 16_Aelita_Cedwick
+def Aelita_Cedwick():                                                     #import and display 16th txt file: 16_Aelita_Cedwick
     clear_screen()
     Aelita_Cedwick_doc = open("16_Aelita_Cedwick.txt","r", encoding="utf-8")
     Aelita_Cedwick_text = Aelita_Cedwick_doc.read()
@@ -320,12 +322,14 @@ def Aelita_Cedwick():                                                     #impor
         #time.sleep(a)
         print()  # blank line between paragraphs
 
+    inventory.append("Tome")
+
     print("                                       * * *")
     next = input("Press Enter to continue")
     print()
     print()
 
-def dark_returns():                                                     #import and display 13th txt file: 17_dark_returns
+def dark_returns():                                                     #import and display 17th txt file: 17_dark_returns
     clear_screen()
     dark_returns_doc = open("17_dark_returns.txt","r", encoding="utf-8")
     dark_returns_text = dark_returns_doc.read()
@@ -341,8 +345,58 @@ def dark_returns():                                                     #import 
     print()
     print()
 
+def save_yourself():                                                     #import and display 18th txt file: 18_save_yourself
+    clear_screen()
+    save_yourself_doc = open("18_save_yourself.txt","r", encoding="utf-8")
+    save_yourself_text = save_yourself_doc.read()
+    paragraphs = save_yourself_text.split("\n\n")
 
+    for p in paragraphs:
+        print(textwrap.fill(p, width=90))
+        #time.sleep(a)
+        print()  # blank line between paragraphs
 
+    choices.append("After everything, you decided to save yourself and leave the girl. You spurned the dead and became trapped.")
+
+    print("                                       * * *")
+    next = input("Press Enter to continue")
+    print()
+    print()
+
+def consequences():                                                     #import and display 13th txt file: 19_consequences
+    clear_screen()
+    consequences_doc = open("19_consequences.txt","r", encoding="utf-8")
+    consequences_text = consequences_doc.read()
+    paragraphs = consequences_text.split("\n\n")
+
+    for p in paragraphs:
+        print(textwrap.fill(p, width=90))
+        #time.sleep(a)
+        print()  # blank line between paragraphs
+
+    print("                                       * * *")
+    next = input("Press Enter to continue")
+    print()
+    print()
+
+def Save_her():                                                     #import and display 18th txt file: 20_Save_her
+    clear_screen()
+    Save_her_doc = open("20_Save_her.txt","r", encoding="utf-8")
+    Save_her_text = Save_her_doc.read()
+    paragraphs = Save_her_text.split("\n\n")
+
+    for p in paragraphs:
+        print(textwrap.fill(p, width=90))
+        #time.sleep(a)
+        print()  # blank line between paragraphs
+
+    choices.append("After everything, you couldn't leave her. You fought the sand and snakes to continue on.")
+    inventory.append("Aelita's Heart")
+    
+    print("                                       * * *")
+    next = input("Press Enter to continue")
+    print()
+    print()
 
 
 intro()
@@ -431,7 +485,7 @@ print()
 while True:
     choice_6 = input("Enter 1 to save yourself or 2 to save her: ")
     if choice_6 == "1":
-        book_in_bag()
+        save_yourself()
         consequences()
         break
     elif choice_6 =="2":
